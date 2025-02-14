@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/lagivcresetpassword/static/css/main.a7d49e6a.css",
-    "main.js": "/lagivcresetpassword/static/js/main.0481e921.js",
+    "main.js": "/lagivcresetpassword/static/js/main.9baad9b3.js",
     "static/js/563.7cf9719b.chunk.js": "/lagivcresetpassword/static/js/563.7cf9719b.chunk.js",
     "index.html": "/lagivcresetpassword/index.html",
     "main.a7d49e6a.css.map": "/lagivcresetpassword/static/css/main.a7d49e6a.css.map",
-    "main.0481e921.js.map": "/lagivcresetpassword/static/js/main.0481e921.js.map",
+    "main.9baad9b3.js.map": "/lagivcresetpassword/static/js/main.9baad9b3.js.map",
     "563.7cf9719b.chunk.js.map": "/lagivcresetpassword/static/js/563.7cf9719b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a7d49e6a.css",
-    "static/js/main.0481e921.js"
+    "static/js/main.9baad9b3.js"
   ]
 }
