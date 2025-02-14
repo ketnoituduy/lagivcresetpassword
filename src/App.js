@@ -3,9 +3,8 @@ import ResetPassword from "./ResetPassword"; // Giả sử bạn đặt tên fil
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/lagivcresetpassword"> {/* Thêm basename */}
       <Routes>
-        {/* Các route khác */}
         <Route path="/reset-password" element={<ResetPassword />} />
       </Routes>
     </Router>
