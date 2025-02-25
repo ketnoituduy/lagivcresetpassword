@@ -5,7 +5,7 @@ import "./ResetPassword.css"; // Import file CSS riêng
 const ResetPassword = () => {
     const [searchParams] = useSearchParams();
     const token = searchParams.get("token");
-    const [password, setPassword] = useState("");
+    const [newPassword, setNewPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
     const [message, setMessage] = useState("");
     const [loading, setLoading] = useState(false);
@@ -19,11 +19,11 @@ const ResetPassword = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        if (password.length < 8) {
+        if (newPassword.length < 8) {
             setMessage("Mật khẩu phải có ít nhất 8 ký tự.");
             return;
         }
-        if (password !== confirmPassword) {
+        if (newPassword !== confirmPassword) {
             setMessage("Mật khẩu xác nhận không khớp.");
             return;
         }
@@ -32,10 +32,10 @@ const ResetPassword = () => {
         setMessage("");
 
         try {
-            const response = await fetch("https://lagivc.onrender.com/reset-password", {
+            const response = await fetch("https://lagivc.onrender.com/api/v1/auth/change-password", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ token, password }),
+                body: JSON.stringify({ token, newPassword }),
             });
 
             const result = await response.json();
@@ -61,8 +61,8 @@ const ResetPassword = () => {
                         <input
                             type="password"
                             placeholder="Mật khẩu mới"
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
+                            value={newPassword}
+                            onChange={(e) => setNewPassword(e.target.value)}
                             required
                         />
                         <input
